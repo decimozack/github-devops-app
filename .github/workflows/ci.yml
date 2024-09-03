@@ -34,6 +34,7 @@ jobs:
           path: |
             build/
             package*.json
+            Dockerfile
   deploy:
     runs-on: ubuntu-20.04
     needs: build
@@ -42,13 +43,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-artifacts
-          path: ./artifacts
 
       - name: Build Docker image
         run: |
-          ls -al
-          ls -al ./artifacts
-          docker build -t zackzc/github-devops-app ./artifacts
+          docker build -t zackzc/github-devops-app .
 
       - name: Run Docker container
         run: |
