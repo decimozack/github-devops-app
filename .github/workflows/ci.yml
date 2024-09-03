@@ -46,6 +46,8 @@ jobs:
 
       - name: Build Docker image
         run: |
+          ls -al
+          ls -al ./artifacts
           docker build -t zackzc/github-devops-app ./artifacts
 
       - name: Run Docker container
