@@ -4,6 +4,7 @@ on: [push]
 
 jobs:
   build:
+    name: Build Application
     runs-on: ubuntu-20.04
 
     steps:
@@ -36,6 +37,7 @@ jobs:
             package*.json
             Dockerfile
   deploy:
+    name: Deploy Application
     runs-on: ubuntu-20.04
     needs: build
     steps:
