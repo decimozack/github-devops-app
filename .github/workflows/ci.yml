@@ -72,13 +72,6 @@ jobs:
         with:
           sarif_file: 'trivy-results.sarif'
 
-      - name: Upload trivy scan result
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: trivy-result-artifacts
-          path: |
-            trivy-results.sarif
       - name: Run Docker container
         run: |
           docker run --name nodejs-app zackzc/github-devops-app:${{ github.sha }}
