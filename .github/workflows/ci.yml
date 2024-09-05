@@ -51,7 +51,7 @@ jobs:
           docker build -t zackzc/github-devops-app:${{ github.sha }} .
 
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@0.20.0
+        uses: aquasecurity/trivy-action@0.24.0
         with:
           image-ref: 'zackzc/github-devops-app:${{ github.sha }}'
           format: 'sarif'
@@ -68,6 +68,7 @@ jobs:
 
       - name: Upload trivy scan result
         uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: trivy-result-artifacts
           path: |
