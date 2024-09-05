@@ -1,6 +1,6 @@
 # Github Devops App
 
-This is a simple "Hello World" project written in Node.js. The project demonstrates the basic setup of a Node.js application, including the use of an open-source dependency, a GitHub Actions workflow for CI/CD, and a Dockerfile for containerization.
+This is a simple "Hello World" project written in Node.js. The project demonstrates the basic setup of a Node.js application, including GitHub Actions workflows for CI/CD, and a Dockerfile for containerization.
 
 ## Project Structure
 
