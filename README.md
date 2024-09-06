@@ -31,6 +31,10 @@ This is a simple "Hello World" project written in Node.js. The project demonstra
 
    `npm install`
 
+3. Build Application
+
+`npm run build`
+
 ### Running the Application
 
 To run the application, use the following command:
